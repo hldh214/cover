@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-xs-12"><h1>Cover</h1>
                 <div class="form-group">
-                    <input type="text" class="form-control search" placeholder="请输入链接 支持: 单曲, 歌单, 专辑, 电台节目" id="input" name="url"
+                    <input type="text" class="form-control search" placeholder="请输入链接" id="input" name="url"
                            autocomplete="off" spellcheck="false">
                     <i class="fa fa-search" onclick="search($('#input').val());"></i>
                 </div>

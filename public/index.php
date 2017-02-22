@@ -1,34 +1,45 @@
 <?php
 
-use Phalcon\Loader;
-use Phalcon\Mvc\View;
-use Phalcon\Mvc\Application;
-use Phalcon\DI\FactoryDefault;
-
 try {
-
     // Register an autoloader
-    $loader = new Loader();
+    $loader = new Phalcon\Loader();
     $loader->registerDirs([
-        '../app/controllers/'
+        '../app/controllers/',
+        '../app/models/'
     ])->register();
 
     // Create a FactoryDefault DI
-    $di = new FactoryDefault();
+    $di = new Phalcon\DI\FactoryDefault();
 
-    // Setting up the view component
+    // Register Volt as a service
+    $di['voltService'] = function ($view, $di) {
+        $volt = new Phalcon\Mvc\View\Engine\Volt($view, $di);
+
+        $volt->setOptions([
+            "compiledPath"      => realpath('..') . "/runtime/",
+            "compiledExtension" => ".compiled",
+        ]);
+
+        return $volt;
+    };
+
+    // Register Volt as template engine
     $di['view'] = function () {
-        $view = new View();
+        $view = new Phalcon\Mvc\View();
         $view->setViewsDir('../app/views/');
+
+        $view->registerEngines([
+            ".volt" => "voltService",
+        ]);
 
         return $view;
     };
 
     // Handle the request
-    $application = new Application($di);
+    $application = new Phalcon\Mvc\Application($di);
 
     $application->handle()->send();
 
 } catch (Exception $e) {
-    echo "Exception: ", $e->getMessage();
+    echo $e->getMessage();
 }
