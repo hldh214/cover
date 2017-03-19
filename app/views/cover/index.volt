@@ -34,7 +34,7 @@
 <script>
     function search(url) {
         $('#result').html('<h1>Loading~</h1><div class="progress progress-striped active"><div class="progress-bar progress-bar-info" style="width: 100%;"></div></div>');
-        $.post('cover', {'url': url}, function (data) {
+        $.post('{{ url("cover") }}', {'url': url}, function (data) {
             var html = ''
             if (data) {
                 html = '<a href="' + data + '" target="_blank"><img class="img-responsive center-block" src="' + data + '" alt="cover"></a>';
