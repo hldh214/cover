@@ -6,7 +6,7 @@ Cover - get NetEase CloudMusic Cover
 Based on Phalcon PHP Framework (https://github.com/phalcon/cphalcon).
 
 * Version: 0.0.2
-* Requirements: PHP >= 5.4, Phalcon = 3.0.0
+* Requirements: PHP >= 5.4, Phalcon ~ 3.0.0
 * Demo: https://dev.yii2.cc/cover
 
 Installation
