@@ -21,10 +21,7 @@ Usage
 -----
 ```php
 <?php
-
-use Cover;
-
-echo Cover::get('music.163.com/#/user/home?id=270834984');
+echo \Cover\Cover::get('music.163.com/#/user/home?id=270834984');
 ```
 
 
