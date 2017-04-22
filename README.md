@@ -12,13 +12,13 @@ Composer version [Phalcon based version](https://github.com/hldh214/cover/tree/m
 
 Installation
 ------------
-```
+```shell
 composer require "hldh214/cover" -vvv
 ```
 
 Usage
 -----
-```
+```php
 <?php
 
 use Cover;
