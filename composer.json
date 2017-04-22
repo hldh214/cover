@@ -1,0 +1,25 @@
+{
+    "name": "hldh214/cover",
+    "description": "get NetEase CloudMusic Cover",
+    "keywords": [
+        "cloudmusic",
+        "netease",
+        "netease-cloudmusic",
+        "netease-cloudmusic-cover"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jim Liu",
+            "email": "hldh214@Gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cover\\": "src/"
+        }
+    }
+}
