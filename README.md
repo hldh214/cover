@@ -16,6 +16,7 @@ Installation
 composer require "hldh214/cover" -vvv
 ```
 
+
 Usage
 -----
 ```php
@@ -33,13 +34,6 @@ Feel free to contribute.
 
 * Found a bug? Try to find it in issue tracker https://github.com/hldh214/cover/issues ... If this bug is missing - you can add an issue about it.
 * Can/want/like develop? Create pull request and I will check it in nearest time!
-
-
-Third Party
------------
-* jQuery: https://jquery.org/ (MIT)
-* Bootstrap: http://getbootstrap.com/ (MIT)
-* font-awesome/fonts/: http://fontawesome.io/ (SIL OFL 1.1)
 
 
 License
