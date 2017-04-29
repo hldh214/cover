@@ -5,7 +5,7 @@ Cover - get NetEase CloudMusic Cover
 
 Composer version [Phalcon based version](https://github.com/hldh214/cover/tree/master).
 
-* Version: 0.0.1
+* Version: 0.0.2
 * Requirements: PHP >= 5.4
 * Demo: https://dev.yii2.cc/cover
 
@@ -13,7 +13,7 @@ Composer version [Phalcon based version](https://github.com/hldh214/cover/tree/m
 Installation
 ------------
 ```shell
-composer require "hldh214/cover:dev-composer" -vvv
+composer require "hldh214/cover" -vvv
 ```
 
 
