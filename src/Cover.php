@@ -7,7 +7,7 @@ class Cover
     const API = [
         'detail'   => 'http://music.163.com/api/song/detail/?ids=[%s]',
         'playlist' => 'http://music.163.com/api/playlist/detail?id=%s',
-        'avatar'   => 'http://music.163.com/api/user/playlist/?offset=0&limit=0&uid=%s',
+        'avatar'   => 'http://music.163.com/api/user/playlist/?offset=0&limit=1&uid=%s',
         'album'    => 'http://music.163.com/api/album/%s',
         'program'  => 'http://music.163.com/api/dj/program/detail?id=%s'
     ];
