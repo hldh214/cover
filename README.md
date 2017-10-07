@@ -8,6 +8,14 @@ Composer version [Phalcon based version](https://github.com/hldh214/cover/tree/m
 * Requirements: PHP >= 5.4
 * Demo: https://dev.yii2.cc/cover
 
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [License](#license)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 Installation
 ------------
