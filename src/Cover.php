@@ -8,16 +8,14 @@ class Cover
         'detail'   => 'http://music.163.com/api/song/detail/?ids=[%s]',
         'playlist' => 'http://music.163.com/api/playlist/detail?id=%s',
         'avatar'   => 'http://music.163.com/api/user/playlist/?offset=0&limit=1&uid=%s',
-        'album'    => 'http://music.163.com/api/album/%s',
-        'program'  => 'http://music.163.com/api/dj/program/detail?id=%s'
+        'album'    => 'http://music.163.com/api/album/%s'
     ];
 
     const PATTERN = [
         'detail'   => '#song(\?id=|/)(?<id>\d+)#',
         'playlist' => '#playlist(\?id=|/)(?<id>\d+)#',
         'avatar'   => '#home\?id=(?<id>\d+)#',
-        'album'    => '#album(\?id=|/)(?<id>\d+)#',
-        'program'  => '#(program|dj)\?id=(?<id>\d+)#'
+        'album'    => '#album(\?id=|/)(?<id>\d+)#'
     ];
 
     public static function get($url)
@@ -44,13 +42,6 @@ class Cover
                 $cover = false;
             } else {
                 $cover = $res['album']['picUrl'];
-            }
-        } elseif (preg_match(self::PATTERN['program'], $url, $program_match)) {
-            $res = json_decode(file_get_contents(sprintf(self::API['program'], $program_match['id']), false, $context), true);
-            if (empty($res['program'])) {
-                $cover = false;
-            } else {
-                $cover = $res['program']['mainSong']['album']['picUrl'];
             }
         } elseif (preg_match(self::PATTERN['avatar'], $url, $avatar_match)) {
             $res = json_decode(file_get_contents(sprintf(self::API['avatar'], $avatar_match['id']), false, $context), true);
