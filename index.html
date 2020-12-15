@@ -8,7 +8,71 @@
     <title>Cover</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="site.min.css" rel="stylesheet">
+    <style>
+        /*github-corner*/
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+
+        @keyframes octocat-wave {
+            0%, 100% {
+                transform: rotate(0)
+            }
+            20%, 60% {
+                transform: rotate(-25deg)
+            }
+            40%, 80% {
+                transform: rotate(10deg)
+            }
+        }
+
+        @media (max-width: 500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+        }
+
+        /*site.min.css*/
+        .site-header {
+            position: relative;
+            text-align: center;
+            background-color: #27AE60;
+            color: #fff;
+            margin-bottom: 0;
+        }
+
+        .site-header .search:focus {
+            border-color: #208d4e;
+        }
+
+        .site-header .search {
+            border: 2px solid #27AE60;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            font-size: 16px;
+            padding: 13px 30px;
+            border-radius: 0;
+            height: auto;
+            text-align: center;
+        }
+
+        .site-header .fa {
+            position: absolute;
+            right: 25px;
+            top: 15px;
+            color: #eee;
+            font-size: 24px;
+        }
+
+        .site-header .form-group {
+            position: relative;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body class="home-template">
 <header class="site-header jumbotron">
